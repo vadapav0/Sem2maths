@@ -1,0 +1,32 @@
+//Find the root of the equation x^3 + x^2 + x -1 
+// using Secants method
+clc
+clear
+// Define funtion or equation
+function y =f(x)
+    y = x^3 + x^2 + x - 1
+endfunction
+
+for i = 0:5
+    if f(i)<0 & f(i+1) > 0 then
+        a = i
+        b = i+1
+    end
+end
+
+disp("By Secants Method")
+printf("\n x = b - ((b-a)/(f(b)-f(a)))*f(b)")
+printf("\n Iteration   a   b   f(a)  f(b)  x  f(x)")
+
+for i = 1 : 50
+    x = b - ((b-a)/(f(b)-f(a)))*f(b)
+    printf("\n  %d   %.4f   %.4f   %.4f   %.4f   %.4f   %.4f",i,a,b,f(a),f(b),x,f(x))
+    a = b
+    b = x 
+    
+    if abs(f(x)) < 0.0001 then
+        break
+    end
+end
+
+printf("\n Root of the equation x^3 + x^2 + x - 1 is %.4f",x)
