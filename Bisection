@@ -1,0 +1,42 @@
+//Find the root of the equation x^3 + x^2 + x -1 using bisection method
+clc
+clear
+// Define funtion or equation
+function y =f(x)
+    y = x^3 + x^2 + x - 1
+endfunction
+
+// Find initial values
+for i = 0:5
+    if f(i) < 0 & f(i+1)>0 then
+        a = i
+        b = i+1
+    end
+end
+printf("\n Initial Values are:")
+printf("\n a = %d,\n b = %d",a,b)
+printf("\n By Bisection Method")
+printf("\n x = (a+b)/2 \n")
+printf("\n Iteration    a        b       x       f(x)")
+
+// Iteration calculations start
+for i = 1:50
+    x = (a+b)/2
+    printf("\n %d            %.4f   %.4f  %.4f  %.4f",i,a,b,x,f(x))
+    if f(x) > 0 then
+        a = a
+        b = x
+    elseif f(x) < 0 then
+        a = x
+        b = b
+    else
+        a = x
+        b = x
+    end 
+    
+    if abs(f(x)) < 0.0001 then
+        break
+    end
+end
+printf("\n")
+printf("\n Root of the equation x^3+x^2+x-1 is %.4f", x)
