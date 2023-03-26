@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<form>
+    Enter your name: <br>
+    <input type="text" name="n1"><br><br>
+    Enter your password: <br>
+    <input type="text" name="n2"><br><br>
+    Your gender: <br>
+    <input type="radio"  name="r1" value="Male">Male
+    <input type="radio"  name="r2" value="Female">Female<br>
+    Hobbies: <br>
+    <input type="checkbox"  name="c1">Dancing
+    <input type="checkbox"  name="c1">Editing
+    <input type="checkbox"  name="c1">Cricket
+    <input type="checkbox"  name="c1">Singing<br><br>
+    Select your state: <br>
+    <select name="s1">
+    <option>Maharashtra
+    <option>Delhi
+    <option>Kolkatta
+    <option>Goa
+    </select>
+    <text area name="a1" rows="4" cols="5"></text><br><br><br>
+    <input type="submit" value="SUBMIT"><br>
+</form>
+</html>
