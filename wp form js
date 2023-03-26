@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function form(){
+        var name= document.forms.Regform.namevalue;
+        var email= document.forms.Regform.emailvalue;
+        var phone= document.forms.Regform.phonevalue;
+        var course= document.forms.Regform.coursevalue;
+        var password= document.forms.Regform.passwordvalue;
+        var address= document.forms.Regform.addressvalue;
+
+
+        var regemail=/^\S+@\S+\.\S+$/;
+        var regemail=/^\d(10)$/;
+        var regemail=/^\2+$/g;
+
+        if(name==""||regname.test(name)){
+            window.alert("Please enter your name properly");
+            naem.focus();
+            return false;
+        }
+        if(name==""||regname.test(name)){
+            window.alert("Please enter your name properly");
+            name.focus();
+            return false;
+        }
+        if(address==""){
+            window.alert("Please enter your address");
+            address.focus();
+            return false;
+        }
+        if(email==""||regemail.test(email)){
+            window.alert("Please enter a valid email address");
+            email.focus();
+            return false;
+        }
+        if(password==""){
+            window.alert("Please enter password");
+            password.focus();
+            return false;
+        }
+        if(password.length<6){
+            window.alert("Password should be atleast 6 character long");
+            password.focus();
+            return false;
+        }
+        if(phone==""||regphone.test(phone)){
+            window.alert("Please enter your name properly");
+            password.focus();
+            return false;
+        }
+        if(cousre.selectedindex==-1){
+            window.alert("Please enter your course");
+            course.focus();
+            return false;
+        }
+        window.alert("form is submitted");
+        return true;
+    }
+    </script>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 100%;
+            border: 100 px soild black ;
+            align-content:center;
+        }
+        form{ 
+            margin: 0;
+            width: 600 px;
+        
+        }
+    </style>
+</body>
+<h1 style="text-align: center;">REGISTARTION FORM </h1>
+<form name="Regform" onsubmit="return fun ()"
+method="post">
+<p>name:<input type="text name" name="name"/></p><br>
+<p>address:<address><input type="text name" name="name"/></p><br>
+<p>email address :<input type="text name" name="name"/></p><br>
+<p>password:<input type="text name" name="name"/></p><br>
+<p>telephone:<input type="text name" name="name"/></p><br>
+<p>
+    SELECT YOUR COURSE 
+    <select type ="text" value=""name="subject"> 
+    <option> BSCIT </option>
+    <option>BBA</option>
+    <option>BBI</option> 
+    <option>B.com</option>
+</select> </p> <br> <br>
+
+<p>comment:<text area cols="55" name="comment">
+    </textarea> </p>
+    <p><input type="submit" value="send" name="Submit"/>
+    <input type="reset" value="reset" name="Reset"/>
+    </p>
+</form>
+</html>
