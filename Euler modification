@@ -1,0 +1,21 @@
+clc
+clear
+function dy=f(x, y)
+ dy = x^2 + y
+endfunction
+x0 = 0
+y0 = 1
+h = 0.02
+printf("\n By Eulers Method")
+printf("\n y1 = y0 + h*f(x0,y0)")
+x1 = x0 + h
+y1 = y0 + h*f(x0,y0)
+printf("\n f(%.2f) = %.4f",x1,y1)
+printf("\n By Eulers Modification Method")
+printf("\n y1 = y0 + h/2*(f(x0,y0) + f(x1,y1n))")
+y1n = y1
+for i = 1:5
+ y1 = y0 + h/2*(f(x0,y0) + f(x1,y1n))
+ y1n = y1
+end
+printf("\n f(%.2f) = %.4f",x1,y1)
