@@ -1,0 +1,18 @@
+clc
+clear
+m = 2.5
+function prob=pois(m, k)
+ prob = exp(-m)*m^k/factorial(k)
+endfunction
+printf("\n By Poissons Distribution")
+printf("\n P(X=x) = e^-m*m^x/x! ")
+printf("No telephone calls")
+k = 0
+prob1 = pois(m,k)
+printf("\n Probability of getting No telephone calls")
+printf("\n P(X=0) = %.4f",prob1)
+printf("\n Exactly 4 calls during the same period")
+k = 4
+prob1 = pois(m,k)
+printf("\n Probability of getting Exactly 4 calls during the same period")
+printf("\n P(X=4) = %.4f",prob1)
