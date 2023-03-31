@@ -1,0 +1,25 @@
+clc
+clear
+function bino=ncr(n, r)
+ bino = factorial(n)/(factorial(r)*factorial(n-r))
+endfunction
+n = 4; // number of trials
+printf("\n Probability of getting head is 1/2")
+p = 0.5; // probability of success (head)
+q = 1 - p
+printf("\n By Binomial Distribution")
+printf("\n P(X=x) = nCx * p^x * q^(n-x)")
+printf("\n probability of getting Three heads")
+k = 3; // number of successes
+prob = ncr(n,k) * p^k * q^(n-k)
+printf("\n P(X = 3) = %.4f",prob)
+printf("\n probability of getting At least 1 head")
+// Probability of getting at least one head
+k = 0; // minimum number of successes
+prob = 1 - ncr(n,k)*p^k * q^(n-k);
+printf("\n P(X >= 1) = %.4f",prob)
+printf("\n probability of getting Number of heads less than two")
+k = 0
+k1 = 1
+prob = ncr(n,k)*p^k*q^(n-k) + ncr(n,k)*p^k1*q^(n-k1)
+printf("\n P(X < 2) = %.4f",prob)
